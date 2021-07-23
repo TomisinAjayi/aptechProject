@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="festivals">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Festivals</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style_1.css" type="text/css">
+</head>
+
+<body ng-controller="festivalCtrl">
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li>
+                    <a href="#!home">Home</a>
+                </li>
+                <li>
+                    <a href="#!about">About Us</a>
+                </li>
+                <li>
+                    <a href="#!gallery">Gallery</a>
+                </li>
+                <li id="fest">Festivals
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#!art">Art</a>
+                        </li>
+                        <li>
+                            <a href="#!food">Food and Drink</a>
+                        </li>
+                        <li>
+                            <a href="#!religious">Religious</a>
+                        </li>
+                        <li>
+                            <a href="#!seasonal">Seasonal and Harvest</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="#!home">
+                            <img src="img/f705feb2-911d-49c1-ae4e-b6edc51dc661.png" alt="festival_logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding-top: 20px;">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#!gallery">Gallery</a>
+                            </li>
+                            <li id="fest">Festivals
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="#!art" style="color:white;">Art</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!food" style="color:white;">Food and Drink</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!religious" style="color:white;">Religious</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!seasonal" style="color:white;">Seasonal and Harvest</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3" style="padding-top: 20px;">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <div ng-view></div>
+    <!-- Get In Touch Section Begin -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>332 Ikorodu Rd, Capital Building,
+                            <br/>By Idiroko B/Stop, Maryland,Lagos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>+2348110134894</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>aptechhubs2@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch Section End -->
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+
+                        <p>Festivals is a guide to some of the most common types of festivals out there. You’ll get to know
+                            the reasons behind these celebrations, as well as examples of some of the most popular festivals
+                            on the planet.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li>
+                                <a href="#!about">About Us </a>
+                            </li>
+
+                            <li>
+                                <a href="#!contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p> Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                            <i class="fa fa-book" aria-hidden="true" style="color:#9c27b0;"></i> by
+                            <a style="text-decoration:none;">batch 763</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" onkeyup="myFunction()" placeholder="Search here.....">
+                <ul id="myUl" style="display:none;">
+                    <li>
+                        <a href="#!religion">religion</a>
+                    </li>
+                    <li>
+                        <a href="#!art">art</a>
+                    </li>
+                    <li>
+                        <a href="#!seasonal">seasonal and harvest</a>
+                    </li>
+                    <li>
+                        <a href="#!religious">religious</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+    <!-- angular, jquery and bootstrap js -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <!-- custom js -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

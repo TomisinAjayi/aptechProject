@@ -1,0 +1,55 @@
+<div class="container">
+    <h2>CART</h2>
+    <p id="cartNote">Your item has been added to cart</p>
+    <p style="text-align:right;">Items in cart:{{cartItems + 1}}
+    </p>
+
+    <div class="container">
+        <table class="table table-bordered" id="checkoutTable">
+            <tr>
+                <td>
+                    <b>Item</b>
+                </td>
+                <td class="text-center">
+                    <b>Quantity</b>
+                </td>
+                <td class="text-center">
+                    <b>Price</b>
+                </td>
+            </tr>
+            <tr id="emptyCart">
+                <td class="text-center" colspan="4">Your cart is empty</td>
+            </tr>
+            <tr ng-repeat="item in items" id="fullCart">
+                <td>{{item.name}}</td>
+                <td class="text-center">
+                    <div class="input-append">
+                        <button class="btn btn-danger" type="button" ng-disabled="item.quantity <= 1" ng-click="addItem()">-</button>
+                        <input type="tel" ng-model="item.quantity" ng-change="saveItems()">
+                        <button class="btn btn-success" type="button" ng-disabled="item.quantity >= 100" ng-class="addItem()">+</button>
+                    </div>
+                </td>
+                <td class="text-center">
+                    {{item.price * item.quantity | currency}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Total</b>
+                </td>
+                <td class="tdCenter">
+                    <b>{{getTotalCount()}}</b>
+                </td>
+                <td class="tdRight">
+                    <b>{{getTotalPrice() | currency}}</b>
+                </td>
+            </tr>
+        </table>
+
+        <div class="text-info" style="margin-bottom:20px;">
+            <button class="btn btn-block btn-danger" style="width:100%;" id="clearCart" click="clearCart()">
+                <i class="icon-trash icon-white"></i> clear cart
+            </button>
+        </div>
+    </div>
+</div>
